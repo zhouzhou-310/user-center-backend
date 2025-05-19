@@ -2,6 +2,7 @@ package com.zhouzhou.usercenterbackend.service;
 
 import com.zhouzhou.usercenterbackend.model.User;
 import com.baomidou.mybatisplus.extension.service.IService;
+import jakarta.servlet.http.HttpServletRequest;
 
 /**
 * @author zhouzhou-310
@@ -17,13 +18,20 @@ public interface UserService extends IService<User> {
      * @param number
      * @return
      */
-    Long userRegister(String userAccount, String userPassword, String checkPassword, String number);
+    long userRegister(String userAccount, String userPassword, String checkPassword, String number);
 
     /**
      * @param userAccount
      * @param userPassword
      * @return
      */
-    User userLogin(String userAccount, String userPassword);
+    User userLogin(String userAccount, String userPassword, HttpServletRequest request);
 
+    /**
+     * 用户脱敏
+     *
+     * @param user
+     * @return
+     */
+    User getSafeUser(User user);
 }

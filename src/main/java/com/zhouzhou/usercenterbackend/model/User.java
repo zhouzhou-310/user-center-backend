@@ -96,7 +96,7 @@ public class User {
      * 编号
      */
     @TableField(value = "number")
-    private String number;
+    private String userNumber;
 
     @Override
     public boolean equals(Object that) {
@@ -123,7 +123,7 @@ public class User {
             && (this.getUpdateTime() == null ? other.getUpdateTime() == null : this.getUpdateTime().equals(other.getUpdateTime()))
             && (this.getIsDelete() == null ? other.getIsDelete() == null : this.getIsDelete().equals(other.getIsDelete()))
             && (this.getUserRole() == null ? other.getUserRole() == null : this.getUserRole().equals(other.getUserRole()))
-            && (this.getNumber() == null ? other.getNumber() == null : this.getNumber().equals(other.getNumber()));
+            && (this.getUserNumber() == null ? other.getUserNumber() == null : this.getUserNumber().equals(other.getUserNumber()));
     }
 
     @Override
@@ -143,7 +143,7 @@ public class User {
         result = prime * result + ((getUpdateTime() == null) ? 0 : getUpdateTime().hashCode());
         result = prime * result + ((getIsDelete() == null) ? 0 : getIsDelete().hashCode());
         result = prime * result + ((getUserRole() == null) ? 0 : getUserRole().hashCode());
-        result = prime * result + ((getNumber() == null) ? 0 : getNumber().hashCode());
+        result = prime * result + ((getUserNumber() == null) ? 0 : getUserNumber().hashCode());
         return result;
     }
 
@@ -166,7 +166,7 @@ public class User {
         sb.append(", updateTime=").append(updateTime);
         sb.append(", isDelete=").append(isDelete);
         sb.append(", userRole=").append(userRole);
-        sb.append(", number=").append(number);
+        sb.append(", userNumber=").append(userNumber);
         sb.append("]");
         return sb.toString();
     }
